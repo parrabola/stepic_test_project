@@ -23,3 +23,9 @@ class ProductPage(BasePage):
     def names_must_match(self):
         assert self.browser.find_element(
             *ProductPageLocators.PRODUCT_NAME_FROM_ALERT_SUCCESS).text == self.product_name
+
+    def should_not_success_message_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_NAME_FROM_ALERT_SUCCESS)
+
+    def should_message_dissapeared(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_NAME_FROM_ALERT_SUCCESS)
