@@ -1,7 +1,5 @@
 import time
-
 import pytest
-
 from .pages.login_page import LoginPage
 from .pages.basket_page import BasketPage
 from .pages.locators import ProductPageLocators
